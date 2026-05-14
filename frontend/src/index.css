@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  background: #040507;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(54, 92, 124, 0.12), transparent 28%),
+    radial-gradient(circle at 84% 8%, rgba(255, 168, 88, 0.08), transparent 22%),
+    radial-gradient(circle at 55% 110%, rgba(173, 39, 56, 0.08), transparent 30%),
+    #040507;
+  color: #f7fafc;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.ambient-grid {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 120px 120px;
+  will-change: transform;
+}
+
+.tactical-mesh {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(125deg, rgba(95, 248, 232, 0.045), transparent 38%),
+    linear-gradient(300deg, rgba(255, 159, 67, 0.03), transparent 42%);
+  background-size: 84px 84px, 84px 84px, 100% 100%, 100% 100%;
+  mask-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.95), transparent 82%);
+  -webkit-mask-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.95), transparent 82%);
+  animation: meshDrift 18s linear infinite;
+}
+
+.glass-panel {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015)),
+    rgba(8, 12, 20, 0.78);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 18px 42px rgba(1, 4, 10, 0.34);
+  contain: paint;
+}
+
+.edge-glow {
+  position: relative;
+}
+
+.edge-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.14), rgba(255, 180, 106, 0.12), rgba(95, 248, 232, 0.1));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* TELEMETRY SPINE - Vertical glowing rail */
+.telemetry-spine {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg, 
+    rgba(95, 248, 232, 0.3) 0%,
+    rgba(95, 248, 232, 0.1) 20%,
+    rgba(255, 159, 67, 0.15) 50%,
+    rgba(255, 90, 111, 0.1) 80%,
+    rgba(95, 248, 232, 0.3) 100%
+  );
+  box-shadow: 0 0 20px rgba(95, 248, 232, 0.25), inset 0 0 15px rgba(95, 248, 232, 0.1);
+  pointer-events: none;
+}
+
+/* TELEMETRY NODE - Pulse indicators */
+.telemetry-node {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.telemetry-node.active {
+  animation: telemetryPulse 2s ease-in-out infinite;
+}
+
+/* ENVIRONMENTAL DEPTH BACKGROUND */
+.environment-depth {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* RADAR ARC */
+.radar-arc {
+  position: absolute;
+  border: 2px solid;
+  border-radius: 50%;
+  opacity: 0.05;
+  animation: radarSweep 4s linear infinite;
+}
+
+.radar-arc.primary {
+  border-color: rgba(95, 248, 232, 0.3);
+}
+
+.radar-arc.secondary {
+  border-color: rgba(255, 159, 67, 0.2);
+  animation-delay: 0.8s;
+}
+
+/* THREAT ENERGY ZONES */
+.threat-zone {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 90, 111, 0.08), transparent 70%);
+  animation: threatPulse 3.2s ease-in-out infinite;
+  filter: blur(2px);
+}
+
+.threat-zone.glow {
+  box-shadow: 0 0 30px rgba(255, 90, 111, 0.15);
+}
+
+/* DATA STREAM ANIMATION */
+.data-stream {
+  position: relative;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    transparent,
+    rgba(95, 248, 232, 0.6),
+    transparent
+  );
+  animation: dataFlow 3s linear infinite;
+}
+
+/* CONNECTOR LINES - Glowing beam gradients */
+.connector-line {
+  position: absolute;
+  background: linear-gradient(90deg, 
+    transparent,
+    rgba(95, 248, 232, 0.4),
+    transparent
+  );
+  opacity: 0;
+  animation: connectorGlow 2.5s ease-in-out infinite;
+}
+
+.connector-line.vertical {
+  width: 1px;
+  height: 100%;
+}
+
+.connector-line.horizontal {
+  height: 1px;
+  width: 100%;
+}
+
+/* ORBITAL MOTIF - Recurring geometric language */
+.orbital {
+  position: absolute;
+  border: 1px solid rgba(95, 248, 232, 0.15);
+  border-radius: 50%;
+  animation: orbitalRotate linear infinite;
+}
+
+.orbital.small {
+  animation-duration: 12s;
+}
+
+.orbital.medium {
+  animation-duration: 18s;
+}
+
+.orbital.large {
+  animation-duration: 24s;
+}
+
+/* TOPOGRAPHIC LINES - Faint background structure */
+.topographic-line {
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(90deg,
+    transparent,
+    rgba(95, 248, 232, 0.04),
+    transparent
+  );
+  opacity: 0.6;
+}
+
+/* BLURRED GLOW REGIONS */
+.glow-region {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.4;
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+.glow-region.cyan {
+  background: radial-gradient(circle, rgba(95, 248, 232, 0.15), transparent);
+}
+
+.glow-region.orange {
+  background: radial-gradient(circle, rgba(255, 159, 67, 0.1), transparent);
+}
+
+.glow-region.red {
+  background: radial-gradient(circle, rgba(255, 90, 111, 0.1), transparent);
+}
+
+.scan-grid {
+  background-image:
+    linear-gradient(rgba(95, 248, 232, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(95, 248, 232, 0.05) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: rgba(95, 248, 232, 0.22);
+}
+
+@keyframes meshDrift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-14px, 10px, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
