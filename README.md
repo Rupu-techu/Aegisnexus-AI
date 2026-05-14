@@ -9,12 +9,14 @@
 [![Database](https://img.shields.io/badge/Database-SQLAlchemy%20%2B%20SQLite-4c8bf5?style=for-the-badge&logo=sqlite&logoColor=ffffff)](./backend)
 [![AI Layer](https://img.shields.io/badge/AI-Gemini%20Ready-fbbc05?style=for-the-badge&logo=google&logoColor=202124)](./backend)
 
+---
 ## 🚀 Introduction
 
 **AegisNexus AI** is an AI Governance and Autonomous Threat Containment Platform built for modern agentic systems, LLM security workflows, and cyber-defense simulations. It combines a cinematic SOC-style frontend with a FastAPI-powered governance backend to analyze malicious prompts, simulate adversarial activity, stream telemetry, and surface real-time containment decisions.
 
 Designed with a startup-grade product lens and hackathon speed, AegisNexus AI demonstrates how governance, detection, auditability, and simulation can live inside one unified command surface.
 
+---
 ## ✨ Core Features
 
 - Real-time AI governance dashboard with a premium futuristic UI
@@ -25,34 +27,32 @@ Designed with a startup-grade product lens and hackathon speed, AegisNexus AI de
 - Policy simulation routes for governance validation
 - Interactive attack simulator for testing adversarial prompt behavior
 - Gemini-assisted trust analysis with deterministic fallback behavior
-
+---
 ## 🖼 Screenshots
 
 | Surface | Preview |
 | --- | --- |
-| Overview Dashboard | ![Overview Screenshot](https://placehold.co/1200x700/0a1020/c7f9ff?text=Overview+Dashboard) |
-| Threat Console | ![Threat Console Screenshot](https://placehold.co/1200x700/0a1020/ffcc70?text=Threat+Console) |
-| Simulator Workspace | ![Simulator Screenshot](https://placehold.co/1200x700/0a1020/9ef7d7?text=Simulator+Workspace) |
+| Overview Dashboard |<img width="1917" height="1077" alt="Screenshot 2026-05-14 183715" src="https://github.com/user-attachments/assets/692674df-83d1-4608-aabf-886000110bf9" />|
+| Threat Console | <img width="1918" height="1078" alt="Screenshot 2026-05-14 183846" src="https://github.com/user-attachments/assets/6be6019f-0a27-4476-84e5-02c719cbcf41" />|
+| Adit Logs| <img width="1918" height="1077" alt="Screenshot 2026-05-14 184239" src="https://github.com/user-attachments/assets/ff52910b-a345-40ed-8843-f25a6c8d08dd" />|
+| Policies |<img width="1918" height="1078" alt="Screenshot 2026-05-14 184327" src="https://github.com/user-attachments/assets/c27e267b-d99b-4b25-a796-6b636890ed50" />|
+| Simulator Workspace | <img width="1918" height="1078" alt="Screenshot 2026-05-14 183919" src="https://github.com/user-attachments/assets/b48391ba-a072-4130-9f09-d38dcba644e7" />|
 
+---
 ## 🎥 Demo Video
 
 Demo video placeholder: 
 
 https://github.com/user-attachments/assets/637f490b-ca8b-4962-92ac-357733df97f5
 
-
-
-## 🌐 Live Deployment
-
-Live deployment placeholder: `Add your hosted frontend URL here`
-
+---
 ## 📚 API Documentation
 
 When the backend is running locally, FastAPI docs are available at:
 
 - Swagger UI: `http://127.0.0.1:8000/docs`
 - ReDoc: `http://127.0.0.1:8000/redoc`
-
+---
 ## 🧠 Architecture Overview
 
 ```text
@@ -77,7 +77,7 @@ When the backend is running locally, FastAPI docs are available at:
 │  └─ Deterministic fallback detection logic                 │
 └──────────────────────────────────────────────────────────────┘
 ```
-
+---
 ## 🏗 Repository Structure
 
 ```bash
@@ -104,7 +104,7 @@ When the backend is running locally, FastAPI docs are available at:
 │   └── vite.config.js
 └── README.md
 ```
-
+---
 ## 🖥 Frontend Stack
 
 | Layer | Technology |
@@ -116,6 +116,7 @@ When the backend is running locally, FastAPI docs are available at:
 | Icons | Lucide React |
 | State / App Context | React Context |
 
+---
 ## ⚙️ Backend Stack
 
 | Layer | Technology |
@@ -349,10 +350,4 @@ Contributions are welcome.
 - Prefer small, reviewable commits
 - Document new routes, environment variables, and system behavior
 - Preserve security-first defaults when extending governance logic
-
-## 📄 License
-
-This project is currently unlicensed.
-
-If you plan to open source AegisNexus AI publicly, add a license file such as `MIT`, `Apache-2.0`, or a custom commercial license before release.
 
