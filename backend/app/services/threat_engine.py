@@ -3,9 +3,9 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 
-from app.schemas import ThreatAnalysisResponse
-from app.services.gemini_service import gemini_service
-from app.utils.risk_scoring import calculate_risk_score, classify_threat_level
+from backend.app.schemas import ThreatAnalysisResponse
+from backend.app.services.gemini_service import gemini_service
+from backend.app.utils.risk_scoring import calculate_risk_score, classify_threat_level
 
 
 @dataclass(frozen=True)

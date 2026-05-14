@@ -2,10 +2,10 @@ from __future__ import annotations
 
 import asyncio
 import json
-import os
 from typing import Any
 
-from app.schemas import GeminiAssessment
+from backend.app.config import get_setting
+from backend.app.schemas import GeminiAssessment
 
 try:
     import google.generativeai as genai
@@ -17,9 +17,9 @@ class GeminiService:
     """Thin abstraction over Gemini with a deterministic fallback path."""
 
     def __init__(self) -> None:
-        self.api_key = os.getenv("GEMINI_API_KEY")
+        self.api_key = get_setting("GEMINI_API_KEY")
         self.enabled = bool(self.api_key and genai)
-        self.model_name = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
+        self.model_name = str(get_setting("GEMINI_MODEL", "gemini-1.5-flash"))
 
         if self.enabled:
             genai.configure(api_key=self.api_key)

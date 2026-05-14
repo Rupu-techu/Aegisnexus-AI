@@ -2,8 +2,8 @@ from __future__ import annotations
 
 from fastapi import APIRouter
 
-from app.schemas import TelemetrySnapshot
-from app.websocket.telemetry_socket import telemetry_manager
+from backend.app.schemas import TelemetrySnapshot
+from backend.app.websocket.telemetry_socket import telemetry_manager
 
 router = APIRouter(prefix="/telemetry", tags=["Telemetry"])
 

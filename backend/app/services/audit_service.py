@@ -5,8 +5,8 @@ import json
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.database.models import AuditLog
-from app.schemas import AuditLogResponse, GovernanceDecision
+from backend.app.database.models import AuditLog
+from backend.app.schemas import AuditLogResponse, GovernanceDecision
 
 
 class AuditService:

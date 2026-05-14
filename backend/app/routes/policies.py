@@ -2,9 +2,9 @@ from __future__ import annotations
 
 from fastapi import APIRouter
 
-from app.schemas import PolicyRule, PolicySimulationResponse, PromptPayload
-from app.services.policy_engine import policy_engine
-from app.services.threat_engine import threat_engine
+from backend.app.schemas import PolicyRule, PolicySimulationResponse, PromptPayload
+from backend.app.services.policy_engine import policy_engine
+from backend.app.services.threat_engine import threat_engine
 
 router = APIRouter(prefix="/policies", tags=["Policies"])
 

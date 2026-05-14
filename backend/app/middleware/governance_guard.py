@@ -7,11 +7,11 @@ from fastapi import Request
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.responses import JSONResponse
 
-from app.database.db import SessionLocal
-from app.services.audit_service import audit_service
-from app.services.policy_engine import policy_engine
-from app.services.threat_engine import threat_engine
-from app.websocket.telemetry_socket import telemetry_manager
+from backend.app.database.db import SessionLocal
+from backend.app.services.audit_service import audit_service
+from backend.app.services.policy_engine import policy_engine
+from backend.app.services.threat_engine import threat_engine
+from backend.app.websocket.telemetry_socket import telemetry_manager
 
 
 class GovernanceGuardMiddleware(BaseHTTPMiddleware):

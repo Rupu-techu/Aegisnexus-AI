@@ -3,9 +3,9 @@ from __future__ import annotations
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session
 
-from app.database.db import get_db
-from app.schemas import AuditLogResponse
-from app.services.audit_service import audit_service
+from backend.app.database.db import get_db
+from backend.app.schemas import AuditLogResponse
+from backend.app.services.audit_service import audit_service
 
 router = APIRouter(prefix="/audit", tags=["Audit"])
 

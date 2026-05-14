@@ -1,6 +1,13 @@
-const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL?.replace(/\/$/, "") ||
-  "http://127.0.0.1:8000";
+const runtimeApiBaseUrl =
+  typeof window !== "undefined" && window.__AEGISNEXUS_API_BASE_URL__
+    ? String(window.__AEGISNEXUS_API_BASE_URL__)
+    : "";
+
+const API_BASE_URL = (
+  import.meta.env.VITE_API_BASE_URL ||
+  runtimeApiBaseUrl ||
+  "http://127.0.0.1:8000"
+).replace(/\/$/, "");
 
 export class ApiError extends Error {
   constructor(message, { status, details } = {}) {

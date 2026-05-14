@@ -6,7 +6,7 @@ from datetime import datetime
 from fastapi import WebSocket
 from starlette.websockets import WebSocketDisconnect
 
-from app.schemas import TelemetryEvent, TelemetrySnapshot
+from backend.app.schemas import TelemetryEvent, TelemetrySnapshot
 
 
 class TelemetryManager:

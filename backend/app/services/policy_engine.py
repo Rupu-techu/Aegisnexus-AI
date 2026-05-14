@@ -4,7 +4,7 @@ from functools import lru_cache
 
 import yaml
 
-from app.schemas import GovernanceDecision, PolicyRule, PolicySimulationResponse, ThreatAnalysisResponse
+from backend.app.schemas import GovernanceDecision, PolicyRule, PolicySimulationResponse, ThreatAnalysisResponse
 
 
 DEFAULT_POLICY_YAML = """

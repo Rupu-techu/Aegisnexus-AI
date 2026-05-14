@@ -7,11 +7,11 @@ from fastapi import FastAPI, WebSocket
 from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 
-from app.database import models  # noqa: F401
-from app.database.db import Base, engine
-from app.middleware.governance_guard import GovernanceGuardMiddleware
-from app.routes import audit, policies, simulator, telemetry, threats
-from app.websocket.telemetry_socket import telemetry_manager
+from backend.app.database import models  # noqa: F401
+from backend.app.database.db import Base, engine
+from backend.app.middleware.governance_guard import GovernanceGuardMiddleware
+from backend.app.routes import audit, policies, simulator, telemetry, threats
+from backend.app.websocket.telemetry_socket import telemetry_manager
 
 load_dotenv()
 

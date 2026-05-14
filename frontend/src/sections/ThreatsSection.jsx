@@ -6,6 +6,7 @@ import { EnvironmentalDepth } from "../components/EnvironmentalDepth";
 import { VisualConnectors } from "../components/VisualConnectors";
 import { useGovernance } from "../context/GovernanceContext";
 import { incidentStream, threatFeed } from "../data/dashboard";
+import { analyzeThreat, getBackendHealth } from "../services/threatAnalysis";
 
 const severityStyles = {
   Critical: "text-critical border-critical/25 bg-critical/[0.08]",
@@ -48,9 +49,9 @@ export function ThreatsSection({ systemState }) {
 
     const checkBackend = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:8000/health");
+        await getBackendHealth();
         if (!ignore) {
-          setConnectionStatus(response.ok ? "ONLINE" : "DEGRADED");
+          setConnectionStatus("ONLINE");
         }
       } catch {
         if (!ignore) {
@@ -80,19 +81,7 @@ export function ThreatsSection({ systemState }) {
     setErrorMessage("");
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/analyze", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ prompt }),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data?.message || "Threat analysis request failed.");
-      }
+      const data = await analyzeThreat(prompt);
 
       const governanceDecision =
         data.recommended_action === "BLOCK"

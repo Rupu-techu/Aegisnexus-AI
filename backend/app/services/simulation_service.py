@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-from app.schemas import AttackSimulationResponse, SimulationType
-from app.websocket.telemetry_socket import telemetry_manager
+from backend.app.schemas import AttackSimulationResponse, SimulationType
+from backend.app.websocket.telemetry_socket import telemetry_manager
 
 
 SIMULATION_LIBRARY: dict[SimulationType, dict[str, str | list[str]]] = {
