@@ -34,7 +34,7 @@ Designed with a startup-grade product lens and hackathon speed, AegisNexus AI de
 | --- | --- |
 | Overview Dashboard |<img width="1917" height="1077" alt="Screenshot 2026-05-14 183715" src="https://github.com/user-attachments/assets/692674df-83d1-4608-aabf-886000110bf9" />|
 | Threat Console | <img width="1918" height="1078" alt="Screenshot 2026-05-14 183846" src="https://github.com/user-attachments/assets/6be6019f-0a27-4476-84e5-02c719cbcf41" />|
-| Adit Logs| <img width="1918" height="1077" alt="Screenshot 2026-05-14 184239" src="https://github.com/user-attachments/assets/ff52910b-a345-40ed-8843-f25a6c8d08dd" />|
+| Audit Logs| <img width="1918" height="1077" alt="Screenshot 2026-05-14 184239" src="https://github.com/user-attachments/assets/ff52910b-a345-40ed-8843-f25a6c8d08dd" />|
 | Policies |<img width="1918" height="1078" alt="Screenshot 2026-05-14 184327" src="https://github.com/user-attachments/assets/c27e267b-d99b-4b25-a796-6b636890ed50" />|
 | Simulator Workspace | <img width="1918" height="1078" alt="Screenshot 2026-05-14 183919" src="https://github.com/user-attachments/assets/b48391ba-a072-4130-9f09-d38dcba644e7" />|
 
