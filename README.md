@@ -56,7 +56,7 @@ When the backend is running locally, FastAPI docs are available at:
 
 ## Deployment
 
-This project can be deployed using Streamlit Community Cloud.
+This project can be deployed using Streamlit Community Cloud at ->
 https://aegisnexus-ai-foqkxqvlxjh4isaxvi4msj.streamlit.app/
 
 ### Requirements
