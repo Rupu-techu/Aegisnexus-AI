@@ -53,7 +53,7 @@ When the backend is running locally, FastAPI docs are available at:
 
 ```text
 ┌──────────────────────────────────────────────────────────────┐
-│                        AegisNexus AI                        │
+│                        AegisNexus AI                         │
 ├──────────────────────────────────────────────────────────────┤
 │ Frontend: React + Vite + Tailwind + Framer Motion          │
 │  ├─ Governance dashboard                                   │
