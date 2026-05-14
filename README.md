@@ -53,6 +53,32 @@ When the backend is running locally, FastAPI docs are available at:
 - Swagger UI: `http://127.0.0.1:8000/docs`
 - ReDoc: `http://127.0.0.1:8000/redoc`
 ---
+
+## Deployment
+
+This project can be deployed using Streamlit Community Cloud.
+https://aegisnexus-ai-foqkxqvlxjh4isaxvi4msj.streamlit.app/
+
+### Requirements
+- Python 3.11
+- Streamlit
+- FastAPI backend dependencies
+
+### Deployment Steps
+
+1. Push the latest code to GitHub.
+
+2. Ensure the repository contains:
+   - `requirements.txt`
+   - `runtime.txt`
+   - Main Streamlit app file
+
+3. Add the following to `runtime.txt`:
+
+```txt
+python-3.11
+
+---
 ## 🧠 Architecture Overview
 
 ```text
