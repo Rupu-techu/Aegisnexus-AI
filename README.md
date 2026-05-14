@@ -36,7 +36,11 @@ Designed with a startup-grade product lens and hackathon speed, AegisNexus AI de
 
 ## 🎥 Demo Video
 
-Demo video placeholder: `Add your project walkthrough URL here`
+Demo video placeholder: 
+
+https://github.com/user-attachments/assets/637f490b-ca8b-4962-92ac-357733df97f5
+
+
 
 ## 🌐 Live Deployment
 
